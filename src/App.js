@@ -7,9 +7,10 @@ import SloganList from './SloganList';
 import SloganForm from './SloganForm';
 import CityNameInput from './CityNameInput';
 import City from './City';
-
+import handleChange from './CastleDropdown.js';
 function App() {
   // track some state here.
+  const [setCastleId, castleId] = useState(1);
   // You'll need to keep track of a skylineId, waterfrontId, and castleId. All these start out as 1
   // you'll need to track a city name, which starts as the city name of your choice.
   // finally, you'll need an array of slogans, which could start out as ['The City of Excellence'] for example
@@ -29,6 +30,10 @@ function App() {
           
           In each Dropdown, pass as props the state handler functions defined above, so that these child components can manipulate parent state 
           */}
+          <div>
+            <CastleDropdown setCastleId={setCastleId} />
+          
+          </div>
         </section>
         {/* here, the SloganForm component takes in the setSlogans state handler function and the slogans array that live in state */}
         {/* here, the SloganList component takes the array of slogans that lives in state */}
