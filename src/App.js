@@ -15,7 +15,9 @@ function App() {
   const [setWaterfrontId, waterFrontId] = useState(1);
   // You'll need to keep track of a skylineId, waterfrontId, and castleId. All these start out as 1
   // you'll need to track a city name, which starts as the city name of your choice.
+  const [cityName, setCityName] = useState('Denver');
   // finally, you'll need an array of slogans, which could start out as ['The City of Excellence'] for example
+  const [slogans, setSlogans] = useState(['Rocky Mountains']);
 
   return (
     <div className="App">
@@ -23,7 +25,7 @@ function App() {
       <City castleId={castleId} skylineId={skylineId} waterFrontId={waterFrontId}/>
       <h1>
         {/* dynamically update the city name here using state */}
-        Welcome to beautiful Portland!
+        Welcome to beautiful {cityName}!
       </h1>
       <div className='bottom'>
         {/* here, the CityNameInput component takes in the setCityName state handler function */}
@@ -41,6 +43,7 @@ function App() {
           </div>
         </section>
         {/* here, the SloganForm component takes in the setSlogans state handler function and the slogans array that live in state */}
+        
         {/* here, the SloganList component takes the array of slogans that lives in state */}
 
       </div>
