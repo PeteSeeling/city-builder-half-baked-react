@@ -7,7 +7,7 @@ import SloganList from './SloganList';
 import SloganForm from './SloganForm';
 import CityNameInput from './CityNameInput';
 import City from './City';
-import handleChange from './CastleDropdown.js';
+
 function App() {
   // track some state here.
   const [setCastleId, castleId] = useState(1);
@@ -40,10 +40,11 @@ function App() {
             <CastleDropdown setCastleId={setCastleId} />
             <SkylineDropdown setSkylineId={setSkylineId} />
             <WaterfrontDropdown setWaterfrontId={setWaterfrontId} />
-          
+        
           </div>
         </section>
         {/* here, the SloganForm component takes in the setSlogans state handler function and the slogans array that live in state */}
+        <SloganForm setSlogans={setSlogans} slogans={slogans} />
 
         {/* here, the SloganList component takes the array of slogans that lives in state */}
 
