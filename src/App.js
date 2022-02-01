@@ -10,9 +10,9 @@ import City from './City';
 
 function App() {
   // track some state here.
-  const [setCastleId, castleId] = useState(1);
-  const [setSkylineId, skylineId] = useState(1);
-  const [setWaterfrontId, waterFrontId] = useState(1);
+  const [castleId, setCastleId] = useState(1);
+  const [skylineId, setSkylineId] = useState(1);
+  const [waterFrontId, setWaterfrontId] = useState(1);
   // You'll need to keep track of a skylineId, waterfrontId, and castleId. All these start out as 1
   // you'll need to track a city name, which starts as the city name of your choice.
   const [cityName, setCityName] = useState('Denver');
